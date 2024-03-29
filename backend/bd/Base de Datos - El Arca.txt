@@ -1,0 +1,40 @@
+-- Creación de la base de datos con configuración de caracteres UTF-8 y motor InnoDB
+CREATE DATABASE ElArcaReservas CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Selección de la base de datos
+USE ElArcaReservas;
+
+-- Creación de la tabla Zona
+CREATE TABLE Zona (
+    ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Nombre VARCHAR(255) NOT NULL
+) ENGINE=INNODB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Creación de la tabla Usuario
+CREATE TABLE Usuario (
+    ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Nombre VARCHAR(255) NOT NULL,
+    Telefono VARCHAR(20) NOT NULL,
+    Correo VARCHAR(255) NOT NULL,
+    Contrasenia VARCHAR(255) NOT NULL
+) ENGINE=INNODB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Creación de la tabla Mesa
+CREATE TABLE Mesa (
+    ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Disponible ENUM('Si', 'No'),
+    ID_Zona INT NOT NULL,
+    FOREIGN KEY (ID_Zona) REFERENCES Zona(ID)
+) ENGINE=INNODB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Creación de la tabla Reservación
+CREATE TABLE Reservacion (
+    ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Fecha_Hora DATETIME NOT NULL,
+    No_Personas INT NOT NULL,
+    ID_Usuario INT NOT NULL,
+    ID_Mesa INT NOT NULL,
+    Estado ENUM('Pendiente', 'Ejecutada', 'En curso', 'Cancelada') NOT NULL DEFAULT 'Pendiente',
+    FOREIGN KEY (ID_Usuario) REFERENCES Usuario(ID),
+    FOREIGN KEY (ID_Mesa) REFERENCES Mesa(ID)
+) ENGINE=INNODB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

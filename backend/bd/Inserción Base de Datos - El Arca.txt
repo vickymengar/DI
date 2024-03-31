@@ -12,7 +12,7 @@ INSERT INTO Usuario (Nombre, Telefono, Correo, Contrasenia) VALUES
 ('María García', '987654321', 'maria@example.com', 'contraseña456'),
 ('Pedro López', '555555555', 'pedro@example.com', 'contraseña789'),
 ('Ana Rodríguez', '999999999', 'ana@example.com', 'contraseñaabc'),
-('Luis Martínez', '777777777', 'luis@example.com', 'contraseñaxyz');
+('Luis Martínez', '777777777', 'luis@example.com', 'contraseñaxyz'),
 ('Carlos Pérez', '123456789', 'carlos@example.com', 'mypassword123');
 
 

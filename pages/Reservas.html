@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>El Arca</title>
+        <link rel="icon" type="image/png" href="../img/Logo.png">
+
+        <!-- Estilos de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- Estilos css -->
+        <link href="../css/index.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Inicio de la barra de navegación -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="text-white"><img src="../img/Logo.png"> El Arca</h1>                    
+                </a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="../Index.php" class="nav-item nav-link active">Inicio</a>
+                        <a href="../Index.php#acerca" class="nav-item nav-link">Acerca</a>
+                        <a href="../Index.php#servicios" class="nav-item nav-link">Servicios</a>
+                        <a href="../Index.php#mennu" class="nav-item nav-link">Menú</a>
+                        <a href="./Contacto.html" class="nav-item nav-link">Contacto</a>
+                        <a href="./Reservas.html" class="nav-item nav-link">Reservaciones</a>
+                        
+                    </div>
+                    <a href="./SignInUp.php" class="btn btn-iniciosesion py-2 px-4">Inicia Sesión</a>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-color hero-header mb-5">
+                <div class="container my-5 py-5">
+                    <div class="row align-items-center g-5">
+                        <div class="container text-center my-5 pt-5 pb-4">
+                            <h1 class="display-3 text-white mb-3 animated slideInDown">Contáctanos</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin de la barra de navegación -->
+        <!-- Inicio de Reservacion -->
+            <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <div class="video">
+                                <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 bg-dark d-flex align-items-center">
+                            <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                                <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reserva</h5>
+                                <h1 class="text-white mb-4">Reserva una mesa en línea</h1>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="name" placeholder="Tu Nombre">
+                                                <label for="name">Tu Nombre</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" id="email" placeholder="Tu Correo Electrónico">
+                                                <label for="email">Tu Correo Electrónico</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating date" id="date3" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Fecha y Hora" data-target="#date3" data-toggle="datetimepicker" />
+                                                <label for="datetime">Fecha y Hora</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <select class="form-select" id="select1">
+                                                    <option value="1">1 Persona</option>
+                                                    <option value="2">2 Personas</option>
+                                                    <option value="3">3 Personas</option>
+                                                </select>
+                                                <label for="select1">Número de Personas</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" placeholder="Solicitud Especial" id="message" style="height: 100px"></textarea>
+                                                <label for="message">Solicitud Especial</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-3" type="submit">Reservar Ahora</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content rounded-0">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Video de Youtube</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Proporción de aspecto 16:9 -->
+                                <div class="ratio ratio-16x9">
+                                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        <!-- Fin de Reservacion-->
+
+    </body>
+</html>

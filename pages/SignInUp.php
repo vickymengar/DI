@@ -23,13 +23,13 @@
                 </form>
             </div>
             <div class="form-container sign-in-container">
-                <form action="#">
-                    <h1 class="is">Inicia sesión</h1>
-                    <input type="email" placeholder="Correo electrónico" id="correo"/>
-                    <input type="password" placeholder="Contraseña" id="contrasenia"/>
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                    <button class="is" id="iniciarsesion">Iniciar sesión</button>
-                    <?php 
+                <form action="../backend/usuario/iniciarsesion.php" method="post">
+                        <h1 class="is">Inicia sesión</h1>
+                        <input type="email" placeholder="Correo electrónico" id="correo" name="correo"/>
+                        <input type="password" placeholder="Contraseña" id="contrasenia" name="contrasenia"/>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                        <button class="is" id="iniciarsesion">Iniciar sesión</button>
+                        <?php 
                             // Mostrar mensaje de error si las credenciales son incorrectas
                             if(isset($mensaje_error)) {
                                 echo '<div class="alert alert-danger" role="alert">' . $mensaje_error . '</div>';

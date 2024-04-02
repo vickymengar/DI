@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -89,6 +89,7 @@ input {
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
+	font-family: 'Lato';
 }
 
 .container {

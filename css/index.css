@@ -1,19 +1,20 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 .text-primary-green{
-    color:#8bc34a;
-}
-
-.tittle{
-    font-family: 'Nunito';
+    color:#027997 !important;
 }
 
 .ff-secondary {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lora' !important;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
     color:#CBE54E;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Lato';
+    font-weight: 300;
 }
 
 .fw-medium {
@@ -42,7 +43,7 @@
 .btn.btn-primary,
 .btn.btn-secondary {
     border-radius: 20px;
-    color: #FFFFFF;
+    color:#027997;
     background-color: #CBE54E;
     border-color:#CBE54E;
 }
@@ -66,6 +67,10 @@
 
 .bg-color{
     background: linear-gradient(90deg, #3a5183 0%, #027997 100%);
+}
+
+.bg-section {
+    background: linear-gradient(90deg, #CBE54E 0%, #8bc34a 100%);
 }
 
 /*** Navbar ***/
@@ -153,11 +158,6 @@
     } 
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
-    color: #ffffff80;
-}
-
-
 /*** Section Title ***/
 .section-title {
     position: relative;
@@ -166,7 +166,6 @@
 
 .section-title::before {
     position: absolute;
-    content: "";
     width: 45px;
     height: 2px;
     top: 50%;
@@ -177,7 +176,6 @@
 
 .section-title::after {
     position: absolute;
-    content: "";
     width: 45px;
     height: 2px;
     top: 50%;
@@ -193,13 +191,18 @@
 
 
 /*** Service ***/
+.line {
+    border-left-color: #027997;
+    border-left-width: thick;
+}
+
 .service-item {
-    box-shadow: 0 0 45px #00000014;
+    background-color:#8bc34a;
     transition: .5s;
 }
 
 .service-item:hover {
-    background: #CBE54E;
+    background:#027997;
 }
 
 .service-item * {
@@ -217,85 +220,10 @@
     font-family: 'Lato';
 }
 
-
-/*** Youtube Video ***/
-.video {
-    position: relative;
-    height: 100%;
-    min-height: 500px;
-    background: linear-gradient(#0f172b1a, #0f172b1a), url(../img/video.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.menucolor{
+    color:#0F172B;
+    font-family: 'Lato';
 }
-
-
-
-@keyframes pulse-border {
-    0% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-        opacity: 0;
-    }
-}
-
-#videoModal {
-    z-index: 99999;
-}
-
-#videoModal .modal-dialog {
-    position: relative;
-    max-width: 800px;
-    margin: 60px auto 0 auto;
-}
-
-#videoModal .modal-body {
-    position: relative;
-    padding: 0px;
-}
-
-#videoModal .close {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    right: 0px;
-    top: -30px;
-    z-index: 999;
-    font-size: 30px;
-    font-weight: normal;
-    color: #FFFFFF;
-    background: #000000;
-    opacity: 1;
-}
-
-
-/*** Team ***/
-.team-item {
-    box-shadow: 0 0 45px #00000014;
-    height: calc(100% - 38px);
-    transition: .5s;
-}
-
-.team-item img {
-    transition: .5s;
-}
-
-.team-item:hover img {
-    transform: scale(1.1);
-}
-
-.team-item:hover {
-    height: 100%;
-}
-
-.team-item .btn {
-    border-radius: 38px 38px 0 0;
-}
-
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item,
@@ -344,8 +272,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #f1f8ff;
-    border: 1px solid #FFFFFF;
+    color:#027997;
     border-radius: 35px;
     transition: .3s;
 }
@@ -359,7 +286,7 @@
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: #FFFFFF;
+    color:#027997;
     font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
@@ -399,4 +326,8 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.imgreserva {
+    background-image: url('../img/fondo2.jpg');
 }

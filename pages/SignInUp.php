@@ -10,18 +10,6 @@
     </head> 
     <body>
         <div class="container" id="container">
-            <div class="form-container sign-up-container">
-                <form action="#">
-                    <h1 class="cc">Crea una cuenta</h1>
-                    <input type="text" placeholder="Nombre" id="usuario" />
-                    <input type="text" placeholder="Apellido Paterno" id="ap_usuario" />
-                    <input type="text" placeholder="Apellido Materno" id="am_usuario" />
-                    <input type="email" placeholder="Correo electrónico" id="correo" />
-                    <input type="cellphone" placeholder="Teléfono celular" id="celular" />
-                    <input type="password" placeholder="Contraseña" id="contrasenia" />
-                    <button class="cc" id="registrar">Registrarse</button>
-                </form>
-            </div>
             <div class="form-container sign-in-container">
                 <form action="../backend/usuario/iniciarsesion.php" method="post">
                         <h1 class="is">Inicia sesión</h1>
@@ -39,14 +27,6 @@
             </div>
             <div class="overlay-container">
                 <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <h3>¿Ya tienes una cuenta?</h3>
-                        <button class="ghost" id="signIn">Iniciar sesión</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <h3>¿No tienes una cuenta todavía?</h3>
-                        <button class="ghost" id="signUp">Registrarse</button>
-                    </div>
                 </div>
             </div>
         </div>

@@ -43,7 +43,7 @@ if (empty($_SESSION["ID"])) {
         <div class="container my-5 py-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-3 text-white animated slideInLeft">Administración de Reservas</h1>
+                    <h1 class="display-3 text-white animated slideInLeft">Administración de Mensajes</h1>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@ if (empty($_SESSION["ID"])) {
     <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
         <div class="row g-0">
             <div class="col-md-12 d-flex align-items-center">
-                <div id="tabla-container"></div>
+                <div id="tabla-mensajes-container"></div>
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@ if (empty($_SESSION["ID"])) {
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="../js/adminreservas.js"></script>    
+    <script src="../js/adminmensajes.js"></script>    
 </body>
 
 </html>

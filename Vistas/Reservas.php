@@ -42,6 +42,9 @@
         </div>
         <!-- Fin de la barra de navegación -->
 
+        <div class="container-fluid">
+            <img src="../img/fondo2.jpg">
+        </div>
         <!-- Inicio de Reservacion -->
         <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="row g-0">
@@ -51,45 +54,43 @@
                                     <div class="row g-3">
                                         <div class="col-md-4">
                                             <div class="form-floating">
+                                                <input type="text" class="form-control" id="name" placeholder="Nombre">
                                                 <label for="name">Nombre</label>
-                                                <input type="text" class="form-control" id="name">
-                                                
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating">
+                                                <input type="text" class="form-control" id="app" placeholder="Apellido paterno">
                                                 <label for="name">Apellido paterno</label>
-                                                <input type="text" class="form-control" id="app">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating">
+                                                <input type="text" class="form-control" id="apm" placeholder="Apellido materno">
                                                 <label for="name">Apellido materno</label>
-                                                <input type="text" class="form-control" id="apm">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-floating">
+                                                <input type="email" class="form-control" id="email" placeholder="Correo Electrónico">
                                                 <label for="email">Correo Electrónico</label>
-                                                <input type="email" class="form-control" id="email">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <div class="form-floating date" id="date3" data-target-input="nearest">
-                                                <label for="datetime">Fecha</label>
-                                                <input type="text" class="form-control datetimepicker-input" id="date" placeholder="Fecha y Hora" data-target="#date3" data-toggle="datetimepicker" />
+                                            <div class="form-floating date" id="date" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" id="date" placeholder="Fecha"/>
+                                                <label for="date">Fecha</label>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <div class="form-floating date" id="date3" data-target-input="nearest">
-                                                <label for="datetime">Hora</label>
-                                                <input type="text" class="form-control datetimepicker-input" id="time" placeholder="Fecha y Hora" data-target="#date3" data-toggle="datetimepicker" />
+                                            <div class="form-floating date" id="time" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" id="time" placeholder="Hora"/>
+                                                <label for="time">Hora</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <label for="select1">Número de Personas</label>
-                                                <select class="form-select" id="select1">
+                                                <select class="form-select" id="nopersonas" placeholder="Número de personas">
                                                     <option value="1"></option>
                                                     <option value="2">1 Persona</option>
                                                     <option value="3">2 Personas</option>
@@ -97,18 +98,30 @@
                                                     <option value="5">4 Personas</option>
                                                     <option value="6">5 Personas</option>
                                                 </select>
+                                                <label for="nopersonas">Número de Personas</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
+                                                <select class="form-select" id="zona">
+                                                    <option value="1"></option>
+                                                    <option value="2">Zona A</option>
+                                                    <option value="3">Zona B</option>
+                                                    <option value="4">Zona C</option>
+                                                </select>
                                                 <label for="zona">Zona</label>
-                                                <input type="text" class="form-control" id="zona">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
+                                                <select class="form-select" id="mesa">
+                                                    <option value="1"></option>
+                                                    <option value="2">Mesa 1</option>
+                                                    <option value="3">Mesa 2</option>
+                                                    <option value="4">Mesa 3</option>
+                                                    <option value="4">Mesa 4</option>
+                                                </select>
                                                 <label for="mesa">Mesa</label>
-                                                <input type="text" class="form-control" id="mesa">
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -116,23 +129,6 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
-                        </div>
-                    </div>
-        </div>
-        
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content rounded-0">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Video de Youtube</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <!-- Proporción de aspecto 16:9 -->
-                                <div class="ratio ratio-16x9">
-                                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
-                                </div>
                             </div>
                         </div>
                     </div>

@@ -331,3 +331,19 @@ h1, h2, h3, h4, h5, h6, p {
 .imgreserva {
     background-image: url('../img/fondo2.jpg');
 }
+
+/* CSS personalizado para cambiar el color de la tabla */
+.custom-table {
+    background-color: #ffff; /* Cambia este color al que desees */
+}
+
+/* CSS personalizado para cambiar el color del encabezado y los bordes */
+.custom-table thead {
+    background-color: #343a40; /* Cambia este color al que desees para el encabezado */
+    color: white; /* Cambia este color al que desees para el texto del encabezado */
+}
+
+.custom-table th,
+.custom-table td {
+    border-color: #027997; /* Cambia este color al que desees para los bordes */
+}

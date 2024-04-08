@@ -13,7 +13,6 @@
             <div class="form-container sign-up-container">
                 <form action="#">
                     <h1 class="cc">Restaurar contraseña</h1>
-                    <p>Ingresa tu correo electrónico para reestablecer tu cuenta</p>
                     <input type="email" placeholder="Correo electrónico" id="Recorreo" />
                     <button class="cc" id="registrar">Enviar</button>
                 </form>

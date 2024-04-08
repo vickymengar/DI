@@ -34,7 +34,7 @@ h3 {
 	color: white;
 }
 
-a {
+a, p {
 	color: black;
 	font-size: 14px;
 	text-decoration: none;

@@ -31,9 +31,15 @@ if (empty($_SESSION["ID"])) {
         </a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-4">
-                <a href="../carta/Menu.pdf" class="nav-item nav-link">Menú</a>
-                <a href="./AdminReservas.php" class="nav-item nav-link">Reservas</a>
-                <a href="./AdminMensajes.php" class="nav-item nav-link">Mensajes</a>
+                <a href="../carta/Menu.pdf" class="nav-item nav-link">
+                    <img src="../img/iconos/menu.png" style="width: 15px; height: 20px;vertical-align: middle;">Menú
+                </a>
+                <a href="./AdminReservas.php" class="nav-item nav-link">
+                    <img src="../img/iconos/reservas2.png" style="width: 20px; height: 15px;vertical-align: middle;"> Reservas
+                </a>
+                <a href="./AdminMensajes.php" class="nav-item nav-link">
+                <img src="../img/iconos/reservas.png" style="width: 15px; height: 20px;vertical-align: middle;"> Mensajes
+                </a>
             </div>
             <a href="../Controladores/Logout/controlador_cerrar_session.php" class="btn btn-iniciosesion py-2 px-4">Cerrar sesión</a>
         </div>

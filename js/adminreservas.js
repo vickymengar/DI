@@ -1,6 +1,6 @@
 // Array de objetos con los datos de las reservas
 const reservas = [
-    { nombre: 'Juan', apellidoPaterno: 'Pérez', apellidoMaterno: 'Gómez', correo: 'juan@example.com', fecha: '2024-04-08', hora: '12:00', personas: 4, zona: 'Terraza', mesa: 3 },
+    { nombre: 'Juan', apellidoPaterno: 'Pérez', apellidoMaterno: 'Gómez', correo: 'juan@example.com', fecha: '2024-04-08', hora: '12:00', personas: 4, zona: 'Terraza', mesa: 3, estado:'Ejecutada'},
     // Agrega más objetos aquí
 ];
 
@@ -23,6 +23,7 @@ function construirTabla() {
                 <th>Número de Personas</th>
                 <th>Zona</th>
                 <th>Mesa</th>
+                <th>Estado</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -43,9 +44,10 @@ function construirTabla() {
                 <td>${reserva.personas}</td>
                 <td>${reserva.zona}</td>
                 <td>${reserva.mesa}</td>
+                <td>${reserva.estado}</td>
                 <td class="d-flex align-items-center"> <!-- Agrega la clase d-flex para hacer los botones flexibles -->
-                    <button class="btn btn-danger me-1">Cancelada</button> <!-- Agrega la clase me-1 para espacio entre botones -->
-                    <button class="btn btn-warning me-1">En Curso</button> <!-- Agrega la clase me-1 para espacio entre botones -->
+                    <button class="btn btn-danger me-1">Cancelar</button> <!-- Agrega la clase me-1 para espacio entre botones -->
+                    <button class="btn btn-warning me-1">En curso</button> <!-- Agrega la clase me-1 para espacio entre botones -->
                     <button class="btn btn-info me-1">Pendiente</button> <!-- Agrega la clase me-1 para espacio entre botones -->
                     <button class="btn btn-success">Ejecutada</button>
                 </td>

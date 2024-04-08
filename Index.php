@@ -24,7 +24,7 @@
                     <a href="Index.php" class="nav-item nav-link active">Inicio</a>
                     <a href="#acerca" class="nav-item nav-link">Acerca</a>
                     <a href="./carta/Menu.pdf" class="nav-item nav-link">Menú</a>
-                    <a href="./pages/Contacto.php" class="nav-item nav-link">Contacto</a>
+                    <a href="Vistas/Contacto.php" class="nav-item nav-link">Contacto</a>
                 </div>
                 <a href="./pages/Reservas.php" class="btn btn-iniciosesion py-2 px-4">Haz tu reservación</a>
             </div>

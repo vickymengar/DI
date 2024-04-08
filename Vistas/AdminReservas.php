@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+if (empty($_SESSION["ID"])) {
+    header("Location: ../Vistas/SignInUp.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -24,9 +32,9 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-4">
                 <a href="../carta/Menu.pdf" class="nav-item nav-link">Menú</a>
-                <a href="./Contacto.php" class="nav-item nav-link">Administrar Reservas</a>
+                <a href="./AdminReservas.php" class="nav-item nav-link">Administrar Reservas</a>
             </div>
-            <a href="./Reservas.php" class="btn btn-iniciosesion py-2 px-4">Cerrar sesión</a>
+            <a href="../Controladores/Logout/controlador_cerrar_session.php" class="btn btn-iniciosesion py-2 px-4">Cerrar sesión</a>
         </div>
     </nav>
 

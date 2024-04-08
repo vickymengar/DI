@@ -1,7 +1,6 @@
 <?php
-
 session_start();
 session_destroy();
-header("localtion: ../Vistas/SignInUp.php")
-
+header("Location: ../../Vistas/SignInUp.php");
+exit; // Añadido para asegurar que el script termine aquí
 ?>

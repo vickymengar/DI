@@ -24,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["btnIngresar"])) {
         // Verificar si se encontró un usuario con las credenciales proporcionadas
         if ($result) {
             // Inicio de sesión exitoso, establecer variables de sesión
-            $_SESSION["correo"] = $usuario;
+            $_SESSION["ID"] = $usuario;
 
             // Redirigir al usuario a la página de inicio
-            header("Location: ../Index.php");
+            header("Location: ../Vistas/AdminReservas.php");
             exit();
         } else {
             // No se encontró ningún usuario con las credenciales proporcionadas

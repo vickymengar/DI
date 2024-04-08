@@ -1,0 +1,21 @@
+-- Insertar registros en la tabla Zona
+INSERT INTO Zona (Nombre) VALUES ('Zona 1'), ('Zona 2'), ('Zona 3');
+
+-- Insertar registros en la tabla Administrador
+INSERT INTO Administrador (Nombre, Telefono, Correo, Contrasenia) VALUES
+('Admin 1', '123456789', 'admin1@example.com', 'contrasenia1'),
+('Admin 2', '987654321', 'admin2@example.com', 'contrasenia2');
+
+-- Insertar registros en la tabla Mesa
+INSERT INTO Mesa (Disponible, ID_Zona) VALUES ('Si', 1), ('No', 1), ('Si', 2), ('No', 2);
+
+-- Insertar registros en la tabla Reservacion
+INSERT INTO Reservacion (Nombre, ApellidoP, ApellidoM, Correo, Fecha, Hora, No_Personas, ID_Mesa, ID_Zona, Estado) VALUES
+('Cliente 1', 'ApellidoP1', 'ApellidoM1', 'cliente1@example.com', '2024-04-07', '18:00', 4, 1, 1, 'Pendiente'),
+('Cliente 2', 'ApellidoP2', 'ApellidoM2', 'cliente2@example.com', '2024-04-08', '19:00', 2, 2, 1, 'En curso'),
+('Cliente 3', 'ApellidoP3', 'ApellidoM3', 'cliente3@example.com', '2024-04-09', '20:00', 6, 3, 2, 'Ejecutada');
+
+-- Insertar registros en la tabla Mensaje
+INSERT INTO Mensaje (NombrePer, CorreoPer, Asunto, Mensaje) VALUES
+('Persona 1', 'persona1@example.com', 'Consulta', 'Mensaje de consulta'),
+('Persona 2', 'persona2@example.com', 'Sugerencia', 'Mensaje de sugerencia');

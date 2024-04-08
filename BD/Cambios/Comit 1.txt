@@ -1,7 +1,0 @@
-Cambios:
-- Se anexa la Base de datos como txt.
-- Se anexan unos registros para realizar pruebas.
-- Se creó la conexión de la Base de Datos del Arca.
-- Se agregó una claúsula para que los caracteres especiales del español puedan visualizarse.
-- Se cambió el tipo de extensión de la vista de inicio de sesión.
-- Se realizó la parte del backend de Inicio de Sesión.

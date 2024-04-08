@@ -14,26 +14,20 @@
                 <form action="#">
                     <h1 class="cc">Restaurar contraseña</h1>
                     <p>Ingresa tu correo electrónico para reestablecer tu cuenta</p>
-                    <input type="email" placeholder="Correo electrónico" id="correo" />
+                    <input type="email" placeholder="Correo electrónico" id="Recorreo" />
                     <button class="cc" id="registrar">Enviar</button>
                 </form>
             </div>
             <div class="form-container sign-in-container">
-                <form action="#">
+                <form action="#" method="post">
                     <h1 class="is">Inicia sesión</h1>
                     <?php
                         include "../Modelos/BD/conexion.php";
                         include "../Controladores/Login/controlador_login.php";
                     ?>
-                    <input type="email" placeholder="Correo electrónico" id="correo"/>
-                    <input type="password" placeholder="Contraseña" id="contrasenia"/>
-                    <button class="is" id="iniciarsesion">Iniciar sesión</button>
-                    <?php 
-                            // Mostrar mensaje de error si las credenciales son incorrectas
-                            if(isset($mensaje_error)) {
-                                echo '<div class="alert alert-danger" role="alert">' . $mensaje_error . '</div>';
-                            }
-                        ?>
+                    <input type="email" placeholder="Correo electrónico" id="Logcorreo" name="Logcorreo"/>
+                    <input type="password" placeholder="Contraseña" id="contrasenia" name="contrasenia"/>
+                    <button class="is" id="iniciarsesion" name="btnIngresar">Iniciar sesión</button>
                 </form>
             </div>
             <div class="overlay-container">

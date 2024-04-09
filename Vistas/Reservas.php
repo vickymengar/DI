@@ -21,10 +21,10 @@
             </a>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0 pe-4">
-                <a href="Index.php" class="nav-item nav-link active"><img src="../img/iconos/inicio.png" style="width: 15px; height: 20px;vertical-align: middle;">Inicio</a>
-                    <a href="#acerca" class="nav-item nav-link"><img src="../img/iconos/grupo.png" style="width: 15px; height: 20px;vertical-align: middle;"> Acerca</a>
-                    <a href="./carta/Menu.pdf" class="nav-item nav-link"><img src="../img/iconos/menu.png" style="width: 15px; height: 20px;vertical-align: middle;">Menú</a>
-                    <a href="Vistas/Contacto.php" class="nav-item nav-link"><img src="../img/iconos/reservas.png" style="width: 15px; height: 20px;vertical-align: middle;">Contacto</a>
+                <a href="../Index.php" class="nav-item nav-link active"><img src="../img/iconos/inicio.png" style="width: 15px; height: 20px;vertical-align: middle;">Inicio</a>
+                    <a href="../Index.php#acerca" class="nav-item nav-link"><img src="../img/iconos/grupo.png" style="width: 15px; height: 20px;vertical-align: middle;"> Acerca</a>
+                    <a href="../carta/Menu.pdf" class="nav-item nav-link"><img src="../img/iconos/menu.png" style="width: 15px; height: 20px;vertical-align: middle;">Menú</a>
+                    <a href="./Contacto.php" class="nav-item nav-link"><img src="../img/iconos/reservas.png" style="width: 15px; height: 20px;vertical-align: middle;">Contacto</a>
                 </div>
                 <a href="./Reservas.php" class="btn btn-iniciosesion py-2 px-4">Haz tu reservación</a>
             </div>
@@ -42,9 +42,6 @@
         </div>
         <!-- Fin de la barra de navegación -->
 
-        <div class="container-fluid">
-            <img src="../img/fondo2.jpg">
-        </div>
         <!-- Inicio de Reservacion -->
         <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="row g-0">

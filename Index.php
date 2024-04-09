@@ -26,7 +26,7 @@
                     <a href="./carta/Menu.pdf" class="nav-item nav-link"><img src="./img/iconos/menu.png" style="width: 15px; height: 20px;vertical-align: middle;">Menú</a>
                     <a href="Vistas/Contacto.php" class="nav-item nav-link"><img src="./img/iconos/reservas.png" style="width: 15px; height: 20px;vertical-align: middle;">Contacto</a>
                 </div>
-                <a href="./pages/Reservas.php" class="btn btn-iniciosesion py-2 px-4">Haz tu reservación</a>
+                <a href="./Vistas/Reservas.php" class="btn btn-iniciosesion py-2 px-4">Haz tu reservación</a>
             </div>
         </nav>
 

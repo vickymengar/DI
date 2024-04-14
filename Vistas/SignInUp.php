@@ -18,12 +18,8 @@
                 </form>
             </div>
             <div class="form-container sign-in-container">
-                <form action="#" method="post">
+                <form id="login-form" action="#" method="post">
                     <h1 class="is">Inicia sesión</h1>
-                    <?php
-                        include "../Modelos/BD/conexion.php";
-                        include "../Controladores/Login/controlador_login.php";
-                    ?>
                     <input type="email" placeholder="Correo electrónico" id="Logcorreo" name="Logcorreo"/>
                     <input type="password" placeholder="Contraseña" id="contrasenia" name="contrasenia"/>
                     <button class="is" id="iniciarsesion" name="btnIngresar">Iniciar sesión</button>
@@ -43,6 +39,18 @@
             </div>
         </div>
     </body>
-    <script src="../js/login.js"></script>
+    <script src="../js/Login/login.js"></script>
+
+    <script>
+// Incluye la biblioteca de AJAX
+if (window.XMLHttpRequest) {
+    // Para navegadores modernos
+    xmlhttp = new XMLHttpRequest();
+} else {
+    // Para navegadores antiguos
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+</script>
+
 </html>
 

@@ -64,7 +64,7 @@
         <div class="row g-0">
             <div class="col-md-12 d-flex align-items-center">
                 <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                    <form>
+                <form action="../Controladores/Reservacion/enviarreservas_controller.php" method="post">
                         <div class="row g-3">
                             <div class="col-md-4">
                                 <div class="form-floating">

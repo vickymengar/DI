@@ -95,10 +95,11 @@ if (empty($_SESSION["ID"])) {
                     echo "<td>" . $reserva['Estado'] . "</td>";
                     // Aquí podrías agregar un enlace para editar o eliminar la reserva
                     echo "<td class='d-flex align-items-center'>"; // Agrega la clase d-flex para hacer los botones flexibles
-                    echo "<button class='btn btn-danger me-1'>Cancelar</button>"; // Agrega la clase me-1 para espacio entre botones
-                    echo "<button class='btn btn-warning me-1'>En curso</button>"; // Agrega la clase me-1 para espacio entre botones
-                    echo "<button class='btn btn-info me-1'>Pendiente</button>"; // Agrega la clase me-1 para espacio entre botones
-                    echo "<button class='btn btn-success'>Ejecutada</button>";
+                   echo "<button class='btn btn-danger me-1' onclick='cancelarReserva(" . $reserva['ID'] . ")'>Cancelar</button>";
+                    echo "<button class='btn btn-warning me-1' onclick='marcarEnCurso(" . $reserva['ID'] . ")'>En curso</button>";
+                    echo "<button class='btn btn-info me-1' onclick='marcarPendiente(" . $reserva['ID'] . ")'>Pendiente</button>";
+                    echo "<button class='btn btn-success' onclick='marcarEjecutada(" . $reserva['ID'] . ")'>Ejecutada</button>";
+
                     echo "</td>";
                     echo "</tr>";
                 }
@@ -134,6 +135,50 @@ if (empty($_SESSION["ID"])) {
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    
+        <script>
+        function cancelarReserva(idReserva) {
+            cambiarEstadoReserva(idReserva, 'Cancelada');
+        }
+
+        function marcarEnCurso(idReserva) {
+            cambiarEstadoReserva(idReserva, 'En curso');
+        }
+
+        function marcarPendiente(idReserva) {
+            cambiarEstadoReserva(idReserva, 'Pendiente');
+        }
+
+        function marcarEjecutada(idReserva) {
+            cambiarEstadoReserva(idReserva, 'Ejecutada');
+        }
+
+        function cambiarEstadoReserva(idReserva, nuevoEstado) {
+            // Aquí puedes hacer una solicitud AJAX a tu controlador de PHP para cambiar el estado de la reserva
+            $.ajax({
+                url: '../../Controladores/Reservacion/reservas_controller.php', // Reemplaza esto con la ruta a tu controlador de PHP
+                method: 'POST',
+                data: {
+                    action: 'cambiarEstadoReserva',
+                    idReserva: idReserva,
+                    nuevoEstado: nuevoEstado
+                },
+                success: function(response) {
+                if(response) {
+                    alert('Estado de la reserva actualizado con éxito');
+                    location.reload(); // Recarga la página para actualizar la tabla
+                } else {
+                    alert('Hubo un error al actualizar el estado de la reserva');
+                }
+            }
+
+        });
+        }
+
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     
 </body>
 

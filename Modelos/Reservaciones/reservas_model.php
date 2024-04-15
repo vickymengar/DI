@@ -12,7 +12,7 @@ class ReservasModel {
         $reservas = array();
 
         // Realiza la consulta SQL para obtener las reservas con el nombre de la zona
-        $sql = "SELECT r.Nombre, r.ApellidoP, r.ApellidoM, r.Correo, r.Fecha, r.Hora, r.No_Personas, z.Nombre AS NombreZona, r.ID_Mesa, r.Estado
+        $sql = "SELECT r.ID,r.Nombre, r.ApellidoP, r.ApellidoM, r.Correo, r.Fecha, r.Hora, r.No_Personas, z.Nombre   AS NombreZona, r.ID_Mesa, r.Estado
                 FROM reservacion r
                 INNER JOIN zona z ON r.ID_Zona = z.ID";
         $resultado = $this->conexion->query($sql);
@@ -28,5 +28,18 @@ class ReservasModel {
     }
 
     // Otras funciones para agregar, actualizar y eliminar reservas
+
+    public function cambiarEstadoReserva($idReserva, $nuevoEstado) {
+        $sql = "UPDATE reservacion SET Estado = ? WHERE ID = ?";
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bind_param("si", $nuevoEstado, $idReserva);
+    
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 }
 ?>

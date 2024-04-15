@@ -1,9 +1,3 @@
-// Array de objetos con los datos de los mensajes
-const mensajes = [
-    { nombre: 'Juan', correo: 'juan@example.com', asunto: 'Terraza', mensaje: 'Excelente servicio' },
-    // Agrega más objetos aquí
-];
-
 // Función para construir la tabla de mensajes
 function construirTablaMensajes() {
     const tablaContainer = document.getElementById('tabla-mensajes-container');

@@ -12,7 +12,7 @@ if (empty($_SESSION["ID"])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Arca - Administración de Reservas</title>
+    <title>El Arca - Administración de Mensajes</title>
     <link rel="icon" type="image/png" href="../img/Logo.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Estilos de Bootstrap -->
@@ -57,13 +57,30 @@ if (empty($_SESSION["ID"])) {
     <!-- Fin de la barra de navegación -->
 
     <!-- Inicio de la tabla de reservaciones -->
+       <!-- Inicio de la tabla de mensajes -->
     <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
         <div class="row g-0">
-            <div class="col-md-12 d-flex align-items-center">
-                <div id="tabla-mensajes-container"></div>
+            <div class="col-md-12">
+                <div id="tabla-mensajes-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Asunto</th>
+                                <th>Mensaje</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-mensajes-body">
+                            <!-- Aquí se llenarán dinámicamente las filas de la tabla -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Fin de la tabla de mensajes -->
+
     <!-- Fin de de la tabla de reservaciones-->
 
 

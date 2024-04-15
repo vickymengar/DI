@@ -1,9 +1,3 @@
-// Array de objetos con los datos de las reservas
-const reservas = [
-    { nombre: 'Juan', apellidoPaterno: 'Pérez', apellidoMaterno: 'Gómez', correo: 'juan@example.com', fecha: '2024-04-08', hora: '12:00', personas: 4, zona: 'Terraza', mesa: 3, estado:'Ejecutada'},
-    // Agrega más objetos aquí
-];
-
 // Función para construir la tabla
 function construirTabla() {
     const tablaContainer = document.getElementById('tabla-container');
@@ -46,10 +40,10 @@ function construirTabla() {
                 <td>${reserva.mesa}</td>
                 <td>${reserva.estado}</td>
                 <td class="d-flex align-items-center"> <!-- Agrega la clase d-flex para hacer los botones flexibles -->
-                    <button class="btn btn-danger me-1">Cancelar</button> <!-- Agrega la clase me-1 para espacio entre botones -->
-                    <button class="btn btn-warning me-1">En curso</button> <!-- Agrega la clase me-1 para espacio entre botones -->
-                    <button class="btn btn-info me-1">Pendiente</button> <!-- Agrega la clase me-1 para espacio entre botones -->
-                    <button class="btn btn-success">Ejecutada</button>
+                    <button class="btn btn-danger me-1" onclick="cancelarReserva(${reserva.id})">Cancelar</button> <!-- Agrega la clase me-1 para espacio entre botones -->
+                    <button class="btn btn-warning me-1" onclick="marcarEnCurso(${reserva.id})">En curso</button> <!-- Agrega la clase me-1 para espacio entre botones -->
+                    <button class="btn btn-info me-1" onclick="marcarPendiente(${reserva.id})">Pendiente</button> <!-- Agrega la clase me-1 para espacio entre botones -->
+                    <button class="btn btn-success" onclick="marcarEjecutada(${reserva.id})">Ejecutada</button>
                 </td>
             </tr>
         `;
@@ -58,6 +52,27 @@ function construirTabla() {
 
     tabla.appendChild(cuerpoTabla);
     tablaContainer.appendChild(tabla);
+}
+
+// Funciones para los botones
+function cancelarReserva(id) {
+    // Aquí puedes realizar alguna acción con la reserva que tiene el ID proporcionado, como cancelarla
+    console.log("Cancelar reserva con ID:", id);
+}
+
+function marcarEnCurso(id) {
+    // Aquí puedes realizar alguna acción con la reserva que tiene el ID proporcionado, como marcarla como "En curso"
+    console.log("Marcar reserva como En curso con ID:", id);
+}
+
+function marcarPendiente(id) {
+    // Aquí puedes realizar alguna acción con la reserva que tiene el ID proporcionado, como marcarla como "Pendiente"
+    console.log("Marcar reserva como Pendiente con ID:", id);
+}
+
+function marcarEjecutada(id) {
+    // Aquí puedes realizar alguna acción con la reserva que tiene el ID proporcionado, como marcarla como "Ejecutada"
+    console.log("Marcar reserva como Ejecutada con ID:", id);
 }
 
 // Llama a la función para construir la tabla cuando el documento esté listo

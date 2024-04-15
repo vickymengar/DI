@@ -13,35 +13,35 @@ if (empty($_SESSION["ID"])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Arca - Administración de Mensajes</title>
-    <link rel="icon" type="image/png" href="../img/Logo.png">
+    <link rel="icon" type="image/png" href="../../img/Logo.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Estilos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous">
     <!-- Estilos css -->
-    <link href="../css/index.css" rel="stylesheet">
+    <link href="../../css/index.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Inicio de la barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
         <a href="" class="navbar-brand p-0">
-            <h1 class="text-white"><img src="../img/Logo.png"> El Arca</h1>
+            <h1 class="text-white"><img src="../../img/Logo.png"> El Arca</h1>
         </a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-4">
-                <a href="../carta/Menu.pdf" class="nav-item nav-link">
-                    <img src="../img/iconos/menu.png" style="width: 15px; height: 20px;vertical-align: middle;">Menú
+                <a href="../../carta/Menu.pdf" class="nav-item nav-link">
+                    <img src="../../img/iconos/menu.png" style="width: 15px; height: 20px;vertical-align: middle;">Menú
                 </a>
-                <a href="./AdminReservas.php" class="nav-item nav-link">
-                    <img src="../img/iconos/reservas2.png" style="width: 20px; height: 15px;vertical-align: middle;"> Reservas
+                <a href="../../Controladores/Reservacion/reservas_controller.php" class="nav-item nav-link">
+                    <img src="../../img/iconos/reservas2.png" style="width: 20px; height: 15px;vertical-align: middle;"> Reservas
                 </a>
-                <a href="./AdminMensajes.php" class="nav-item nav-link">
-                <img src="../img/iconos/reservas.png" style="width: 15px; height: 20px;vertical-align: middle;"> Mensajes
+                <a href="../../Controladores/Contacto/mensajes_controller.php" class="nav-item nav-link">
+                <img src="../../img/iconos/reservas.png" style="width: 15px; height: 20px;vertical-align: middle;"> Mensajes
                 </a>
             </div>
-            <a href="../Controladores/Logout/controlador_cerrar_session.php" class="btn btn-iniciosesion py-2 px-4">Cerrar sesión</a>
+            <a href="../../Controladores/Logout/controlador_cerrar_session.php" class="btn btn-iniciosesion py-2 px-4">Cerrar sesión</a>
         </div>
     </nav>
 
@@ -72,7 +72,24 @@ if (empty($_SESSION["ID"])) {
                             </tr>
                         </thead>
                         <tbody id="tabla-mensajes-body">
-                            <!-- Aquí se llenarán dinámicamente las filas de la tabla -->
+                            <?php
+                            // Verificar si $mensajes está definido y no es nulo
+                            if (isset($mensajes) && !empty($mensajes)) {
+                                // Iterar sobre los mensajes y mostrar cada mensaje en una fila de la tabla
+                                foreach ($mensajes as $mensaje) {
+                                    echo "<tr>";
+                                    echo "<td>" . $mensaje['NombrePer'] . "</td>";
+                                    echo "<td>" . $mensaje['CorreoPer'] . "</td>";
+                                    echo "<td>" . $mensaje['Asunto'] . "</td>";
+                                    echo "<td>" . $mensaje['Mensaje'] . "</td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                // Manejar el caso en que no hay mensajes
+                                echo "<tr><td colspan='4'>No hay mensajes disponibles.</td></tr>";
+                            }
+                            ?>
+
                         </tbody>
                     </table>
                 </div>
@@ -104,7 +121,7 @@ if (empty($_SESSION["ID"])) {
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="../js/adminmensajes.js"></script>    
+
 </body>
 
 </html>

@@ -12,34 +12,19 @@ class ReservasController {
     }
 
     public function obtenerReservas() {
-        // Obtener las reservas utilizando el modelo
+        // Obtiene todas las reservas del modelo
         $reservas = $this->reservasModel->obtenerReservas();
-        
-        // Incluir la vista para mostrar las reservas
-        include '../../Vistas/AdminReservas.php';
-    }
 
-    public function agregarReserva($datosReserva) {
-        // Aquí puedes implementar la lógica para agregar una nueva reserva
+       
+         include '../../Vistas/AdminReservas.php';
     }
-
-    public function actualizarReserva($idReserva, $datosActualizados) {
-        // Aquí puedes implementar la lógica para actualizar una reserva existente
-    }
-
-    public function eliminarReserva($idReserva) {
-        // Aquí puedes implementar la lógica para eliminar una reserva
-    }
-
-    // Otras funciones del controlador...
+    
 }
+ // Crear una nueva instancia de ReservasModel
+ $reservasModel = new ReservasModel($conexion);
+ // Crear una nueva instancia de ReservasController
+ $reservasController = new ReservasController($reservasModel);
 
-// Inicialización del modelo y del controlador
-$reservasModel = new ReservasModel($conexion); // Pasa la conexión como argumento
-$reservasController = new ReservasController($reservasModel);
-
-// Obtener y mostrar las reservas
-$reservasController->obtenerReservas();
-
-// Resto del código...
+ // Llamar al método para obtener las reservas y mostrar la página de reservas
+ $reservasController->obtenerReservas();
 ?>

@@ -12,27 +12,32 @@ class AuthController {
     }
 
     public function login($email, $password) {
-        if ($this->authModel->verifyCredentials($email, $password)) {
+        // Verifica las credenciales del usuario
+        $isValid = $this->authModel->verifyCredentials($email, $password);
+
+        if ($isValid) {
+            // Las credenciales son válidas
+            // Inicia la sesión y redirige al usuario a la página principal
             session_start();
             $_SESSION['ID'] = $email;
-            return true; // Autenticación exitosa
+            echo 'success';
         } else {
-            return false; // Autenticación fallida
+            // Las credenciales no son válidas
+            // Muestra un mensaje de error
+            echo 'error';
         }
     }
 }
 
-// Inicialización del modelo y del controlador
+// Crear una nueva instancia de AuthModel
 $authModel = new AuthModel($conexion);
+// Crear una nueva instancia de AuthController
 $authController = new AuthController($authModel);
 
-// Manejar la solicitud de inicio de sesión
-if (isset($_POST['action']) && $_POST['action'] == 'login') {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    echo $authController->login($email, $password) ? "success" : "error";
+if (isset($_POST['Logcorreo']) && isset($_POST['contrasenia'])) {
+    $correo = $_POST['Logcorreo'];
+    $contrasenia = $_POST['contrasenia'];
+    // Llamar al método de inicio de sesión del controlador
+    $authController->login($correo, $contrasenia);
 }
-
-// Cerrar la conexión después de su uso
-$conexion->close();
 ?>

@@ -22,7 +22,7 @@
                     <h1 class="is">Inicia sesión</h1>
                     <input type="email" placeholder="Correo electrónico" id="Logcorreo" name="Logcorreo"/>
                     <input type="password" placeholder="Contraseña" id="contrasenia" name="contrasenia"/>
-                    <button class="is" id="iniciarsesion" name="btnIngresar">Iniciar sesión</button>
+                    <button class="is" id="iniciarsesion">Iniciar sesión</button>
                 </form>
             </div>
             <div class="overlay-container">
@@ -38,19 +38,38 @@
                 </div>
             </div>
         </div>
-    </body>
-    <script src="../js/Login/login.js"></script>
 
-    <script>
-// Incluye la biblioteca de AJAX
-if (window.XMLHttpRequest) {
-    // Para navegadores modernos
-    xmlhttp = new XMLHttpRequest();
-} else {
-    // Para navegadores antiguos
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-}
+
+        <script>
+document.getElementById('iniciarsesion').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    var correo = document.getElementById('Logcorreo').value;
+    var contrasenia = document.getElementById('contrasenia').value;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "../Controladores/Login/auth_controller.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            if (this.responseText === 'success') {
+                alert('Inicio de sesión exitoso!');
+                window.location.href = '../Controladores/Reservacion/reservas_controller.php';
+            } else {
+                alert('Correo electrónico o contraseña incorrectos.');
+            }
+        }
+    }
+
+    xhr.send("Logcorreo=" + correo + "&contrasenia=" + contrasenia);
+});
 </script>
+
+    </body>
+    
+
+
 
 </html>
 

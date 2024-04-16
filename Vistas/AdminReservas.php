@@ -138,42 +138,42 @@ if (empty($_SESSION["ID"])) {
     
         <script>
         function cancelarReserva(idReserva) {
-            cambiarEstadoReserva(idReserva, 'Cancelada');
-        }
+    cambiarEstadoReserva(idReserva, 'Cancelada');
+}
 
-        function marcarEnCurso(idReserva) {
-            cambiarEstadoReserva(idReserva, 'En curso');
-        }
+function marcarEnCurso(idReserva) {
+    cambiarEstadoReserva(idReserva, 'En curso');
+}
 
-        function marcarPendiente(idReserva) {
-            cambiarEstadoReserva(idReserva, 'Pendiente');
-        }
+function marcarPendiente(idReserva) {
+    cambiarEstadoReserva(idReserva, 'Pendiente');
+}
 
-        function marcarEjecutada(idReserva) {
-            cambiarEstadoReserva(idReserva, 'Ejecutada');
-        }
+function marcarEjecutada(idReserva) {
+    cambiarEstadoReserva(idReserva, 'Ejecutada');
+}
 
-        function cambiarEstadoReserva(idReserva, nuevoEstado) {
-            // Aquí puedes hacer una solicitud AJAX a tu controlador de PHP para cambiar el estado de la reserva
-            $.ajax({
-                url: '../../Controladores/Reservacion/reservas_controller.php', // Reemplaza esto con la ruta a tu controlador de PHP
-                method: 'POST',
-                data: {
-                    action: 'cambiarEstadoReserva',
-                    idReserva: idReserva,
-                    nuevoEstado: nuevoEstado
-                },
-                success: function(response) {
-                if(response) {
-                    alert('Estado de la reserva actualizado con éxito');
-                    location.reload(); // Recarga la página para actualizar la tabla
-                } else {
-                    alert('Hubo un error al actualizar el estado de la reserva');
-                }
+function cambiarEstadoReserva(idReserva, nuevoEstado) {
+    // Aquí puedes hacer una solicitud AJAX a tu controlador de PHP para cambiar el estado de la reserva
+    $.ajax({
+        url: '../../Controladores/Reservacion/reservas_controller.php', // Reemplaza esto con la ruta a tu controlador de PHP
+        method: 'POST',
+        data: {
+            action: 'cambiarEstadoReserva',
+            idReserva: idReserva,
+            nuevoEstado: nuevoEstado
+        },
+        success: function(response) {
+            if(response) {
+                alert('Estado de la reserva actualizado con éxito');
+                location.reload(); // Recarga la página para actualizar la tabla
+            } else {
+                alert('Hubo un error al actualizar el estado de la reserva');
             }
-
-        });
         }
+    });
+}
+
 
         </script>
 

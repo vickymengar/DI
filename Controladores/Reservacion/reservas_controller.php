@@ -36,13 +36,19 @@ class ReservasController {
 // Crear una nueva instancia de ReservasController
 $reservasController = new ReservasController($reservasModel);
 
-$action = $_POST['action'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['action'])) {
+        $action = $_POST['action'];
 
-if ($action == 'cambiarEstadoReserva') {
-    $idReserva = $_POST['idReserva'];
-    $nuevoEstado = $_POST['nuevoEstado'];
-    $success = $reservasController->cambiarEstadoReserva($idReserva, $nuevoEstado);
+        if ($action == 'cambiarEstadoReserva') {
+            $idReserva = $_POST['idReserva'];
+            $nuevoEstado = $_POST['nuevoEstado'];
+            $success = $reservasController->cambiarEstadoReserva($idReserva, $nuevoEstado);
 
-    echo json_encode(['success' => $success]);
+            echo json_encode(['success' => $success]);
+        }
+    }
 }
+
+
 ?>

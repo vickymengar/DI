@@ -59,7 +59,6 @@ if (empty($_SESSION["ID"])) {
     <!-- Inicio de la tabla de reservaciones -->
     <!-- Tabla de reservas -->
     <div class="container">
-    <h2>Reservas</h2>
     <table class="table">
         <thead>
             <tr>

@@ -65,84 +65,91 @@
             <div class="col-md-12 d-flex align-items-center">
                 <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                 <form action="../Controladores/Reservacion/enviarreservas_controller.php" method="post">
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Nombre">
-                                    <label for="name">Nombre</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="app" placeholder="Apellido paterno">
-                                    <label for="name">Apellido paterno</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="apm" placeholder="Apellido materno">
-                                    <label for="name">Apellido materno</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Correo Electrónico">
-                                    <label for="email">Correo Electrónico</label>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="fecha" placeholder="Fecha">
-                                    <label for="fecha">Fecha</label>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="hora" placeholder="Hora">
-                                    <label for="hora">Hora</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <select class="form-select" id="nopersonas" placeholder="Número de personas">
-                                        <option value="1"></option>
-                                        <option value="2">1 Persona</option>
-                                        <option value="3">2 Personas</option>
-                                        <option value="4">3 Personas</option>
-                                        <option value="5">4 Personas</option>
-                                        <option value="6">5 Personas</option>
-                                    </select>
-                                    <label for="nopersonas">Número de Personas</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <select class="form-select" id="zona">
-                                        <option value="1"></option>
-                                        <option value="2">Zona A</option>
-                                        <option value="3">Zona B</option>
-                                        <option value="4">Zona C</option>
-                                    </select>
-                                    <label for="zona">Zona</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <select class="form-select" id="mesa">
-                                        <option value="1"></option>
-                                        <option value="2">Mesa 1</option>
-                                        <option value="3">Mesa 2</option>
-                                        <option value="4">Mesa 3</option>
-                                        <option value="4">Mesa 4</option>
-                                    </select>
-                                    <label for="mesa">Mesa</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Reservar Ahora</button>
-                            </div>
-                        </div>
-                    </form>
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                <label for="nombre">Nombre</label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno" placeholder="Apellido paterno" required>
+                <label for="apellidoPaterno">Apellido paterno</label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno" placeholder="Apellido materno">
+                <label for="apellidoMaterno">Apellido materno</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-floating">
+                <input type="email" class="form-control" id="correoElectronico" name="correoElectronico" placeholder="Correo Electrónico" required>
+                <label for="correoElectronico">Correo Electrónico</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="fecha" name="fecha" placeholder="Fecha" required>
+                <label for="fecha">Fecha</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="hora" name="hora" placeholder="Hora" required>
+                <label for="hora">Hora</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <select class="form-select" id="nopersonas" name="numeroPersonas" required>
+                    <option value="" disabled selected></option>
+                    <option value="2">1 Persona</option>
+                    <option value="3">2 Personas</option>
+                    <option value="4">3 Personas</option>
+                    <option value="5">4 Personas</option>
+                    <option value="6">5 Personas</option>
+                </select>
+                <label for="nopersonas">Número de Personas</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <select class="form-select" id="zona" name="zona" required>
+                    <option value="" disabled selected></option>
+                    <option value="2">Zona A</option>
+                    <option value="3">Zona B</option>
+                    <option value="4">Zona C</option>
+                </select>
+                <label for="zona">Zona</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <select class="form-select" id="mesa" name="mesa" required>
+                    <option value="" disabled selected></option>
+                    <option value="2">Mesa 1</option>
+                    <option value="3">Mesa 2</option>
+                    <option value="4">Mesa 3</option>
+                    <option value="4">Mesa 4</option>
+                </select>
+                <label for="mesa">Mesa</label>
+            </div>
+        </div>
+
+    </div>
+        <div class="row">
+        <div class="col-6 mt-3">
+            <button class="btn btn-primary w-100 py-3" type="submit">Reservar Ahora</button>
+        </div>
+        <div class="col-6 mt-3">
+            <button class="btn btn-secondary w-100 py-3" type="reset">Limpiar Formulario</button>
+        </div>
+    </div>
+</form>
+
                 </div>
             </div>
         </div>
@@ -173,11 +180,12 @@
     <script>
         // Inicializar el datpicker
         $('#fecha').datepicker({
-            format: 'dd/mm/yyyy',
+            format: 'yyyy-mm-dd',
             language: 'es',
             autoclose: true,
             todayHighlight: true
         });
+        
 
         // Inicializar el timepicker
         $('#hora').timepicker({

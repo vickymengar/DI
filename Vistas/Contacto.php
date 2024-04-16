@@ -84,31 +84,35 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Tu Nombre">
+                                            <input type="text" class="form-control" id="name" placeholder="Tu Nombre" name="NombrePer" required>
                                             <label for="name">Tu Nombre</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Tu Correo Electrónico">
+                                            <input type="email" class="form-control" id="email" placeholder="Tu Correo Electrónico" name="CorreoPer" required>
                                             <label for="email">Tu Correo Electrónico</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Asunto">
+                                            <input type="text" class="form-control" id="subject" placeholder="Asunto"  name="Asunto" required>
                                             <label for="subject">Asunto</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Deja aquí tu mensaje" id="message" style="height: 150px"></textarea>
+                                            <textarea class="form-control" placeholder="Deja aquí tu mensaje" id="message" style="height: 150px" name="Mensaje"></textarea>
                                             <label for="message">Mensaje</label>
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-6">
                                         <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
                                     </div>
+                                    <div class="col-6 mt-3">
+                                        <button class="btn btn-secondary w-100 py-3" type="reset">Limpiar Formulario</button>
+                                    </div>
+
                                 </div>
                             </form>
                         </div>

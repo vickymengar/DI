@@ -6,7 +6,7 @@ class EnviarReservasControlador {
     private $modelo;
 
     public function __construct($conexion) {
-        $this->modelo = new ReservaModelo($conexion);
+        $this->modelo = new EnviarReservasModelo($conexion);
     }
 
     public function guardarReserva() {
@@ -24,14 +24,15 @@ class EnviarReservasControlador {
         // Guardar la reserva en la base de datos
         $resultado = $this->modelo->guardarReserva($nombre, $apellidoPaterno, $apellidoMaterno, $correoElectronico, $fecha, $hora, $numeroPersonas, $zona, $mesa);
 
-        // Redireccionar según el resultado
+        // Definir el mensaje según el resultado
         if ($resultado) {
-            // Éxito
-            header("Location: reserva_exitosa.php");
+            $mensaje = "La reserva se ha guardado exitosamente.";
         } else {
-            // Error
-            header("Location: reserva_error.php");
+            $mensaje = "Ha ocurrido un error al guardar la reserva. Por favor, inténtalo de nuevo.";
         }
+
+        // Imprimir el mensaje en la página y redirigir a Reservas.php después de 2 segundos
+        echo "<script>alert('$mensaje'); setTimeout(function(){ window.location.href = '../../Vistas/Reservas.php'; }, 2000);</script>";
     }
 }
 

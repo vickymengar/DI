@@ -11,10 +11,10 @@ class EnviarMensajesControlador {
 
     public function enviarMensaje() {
         // Recuperar los datos del formulario
-        $nombre = $_POST['nombre'];
-        $correoElectronico = $_POST['email'];
-        $asunto = $_POST['subject'];
-        $mensaje = $_POST['message'];
+        $nombre = $_POST['NombrePer'];
+        $correoElectronico = $_POST['CorreoPer'];
+        $asunto = $_POST['Asunto'];
+        $mensaje = $_POST['Mensaje'];
 
         // Guardar el mensaje en la base de datos
         $resultado = $this->modelo->guardarMensaje($nombre, $correoElectronico, $asunto, $mensaje);
@@ -23,15 +23,17 @@ class EnviarMensajesControlador {
         if ($resultado) {
             // Éxito
             header("Location: mensaje_exitoso.php");
+            exit();
         } else {
             // Error
             header("Location: mensaje_error.php");
+            exit();
         }
     }
 }
 
 // Crear instancia del controlador y ejecutar el método enviarMensaje si se envió el formulario
-$controlador = new EnviarMensajesControlador($conexion); // $conexion se obtiene del archivo conexion.php
+$controlador = new EnviarMensajesControlador($conexion);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $controlador->enviarMensaje();
 }
